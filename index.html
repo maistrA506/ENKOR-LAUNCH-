@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENKOR New Arrival</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .enkor-banner {
+            background: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 50%, #0b0b0b 100%);
+            padding: 50px 20px;
+            text-align: center;
+            font-family: 'Arial Black', 'Helvetica', sans-serif;
+            border-bottom: 4px solid #e60000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enkor-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(230, 0, 0, 0.05) 0%, transparent 70%);
+            animation: pulseGlow 4s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .enkor-banner * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .enkor-logo {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: 8px;
+            color: #ffffff;
+            text-shadow: 0 0 30px rgba(230, 0, 0, 0.4);
+        }
+
+        .enkor-logo span {
+            color: #e60000;
+        }
+
+        .enkor-tagline {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 6px;
+            color: #aaaaaa;
+            margin-top: 4px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .enkor-headline {
+            font-size: 52px;
+            font-weight: 900;
+            color: #ffffff;
+            margin-top: 25px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            line-height: 1.2;
+        }
+
+        .enkor-headline .highlight {
+            color: #e60000;
+            text-shadow: 0 0 40px rgba(230, 0, 0, 0.6);
+        }
+
+        .enkor-subheadline {
+            font-size: 22px;
+            font-weight: 400;
+            color: #cccccc;
+            margin-top: 12px;
+            letter-spacing: 2px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .enkor-models {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .enkor-model-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px 30px;
+            min-width: 150px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .enkor-model-card:hover {
+            transform: translateY(-8px);
+            border-color: #e60000;
+            box-shadow: 0 10px 40px rgba(230, 0, 0, 0.2);
+        }
+
+        .enkor-model-name {
+            font-size: 20px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .enkor-model-price {
+            font-size: 28px;
+            font-weight: 900;
+            color: #e60000;
+            margin-top: 5px;
+        }
+
+        .enkor-model-desc {
+            font-size: 12px;
+            color: #999;
+            margin-top: 6px;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .enkor-cta {
+            margin-top: 40px;
+            display: inline-block;
+            background: #e60000;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 900;
+            padding: 18px 60px;
+            text-decoration: none;
+            border-radius: 50px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(230, 0, 0, 0.3);
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .enkor-cta:hover {
+            background: #ff1a1a;
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(230, 0, 0, 0.6);
+        }
+
+        .enkor-countdown {
+            margin-top: 25px;
+            font-size: 20px;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .enkor-countdown span {
+            font-size: 32px;
+            font-weight: 900;
+            color: #e60000;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 15px;
+            border-radius: 8px;
+            margin: 0 4px;
+            border: 1px solid #333;
+        }
+
+        .enkor-footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+            letter-spacing: 3px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .enkor-logo { font-size: 32px; letter-spacing: 4px; }
+            .enkor-headline { font-size: 30px; }
+            .enkor-subheadline { font-size: 16px; }
+            .enkor-models { gap: 15px; }
+            .enkor-model-card { padding: 15px 20px; min-width: 120px; }
+            .enkor-model-price { font-size: 22px; }
+            .enkor-cta { font-size: 16px; padding: 14px 35px; }
+            .enkor-countdown span { font-size: 22px; padding: 3px 10px; }
+        }
+
+        @media (max-width: 480px) {
+            .enkor-headline { font-size: 22px; }
+            .enkor-models { flex-direction: column; align-items: center; }
+            .enkor-model-card { width: 80%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="enkor-banner">
+
+        <div class="enkor-logo">ENKOR<span>.</span></div>
+        <div class="enkor-tagline">Enjoying Life</div>
+
+        <div class="enkor-headline">
+            The Wait Is <span class="highlight">Over</span>
+        </div>
+        <div class="enkor-subheadline">
+            Absolute Perfection Bass – Beating your heart.
+        </div>
+
+        <div class="enkor-models">
+            <div class="enkor-model-card">
+                <div class="enkor-model-name">EK3161</div>
+                <div class="enkor-model-price">4,400</div>
+                <div class="enkor-model-desc">Multimedia Speaker</div>
+            </div>
+            <div class="enkor-model-card">
+                <div class="enkor-model-name">EK3160</div>
+                <div class="enkor-model-price">4,300</div>
+                <div class="enkor-model-desc">Multimedia Speaker</div>
+            </div>
+            <div class="enkor-model-card">
+                <div class="enkor-model-name">EKSB61</div>
+                <div class="enkor-model-price">—</div>
+                <div class="enkor-model-desc">2:1:2 CH Soundbar</div>
+            </div>
+        </div>
+
+        <div class="enkor-countdown">
+            🗓️ Arrives in: 
+            <span id="days">00</span>d 
+            <span id="hours">00</span>h 
+            <span id="minutes">00</span>m 
+            <span id="seconds">00</span>s
+        </div>
+
+        <a href="https://wa.me/254793602226?text=I%20want%20to%20pre-order%20ENKOR" class="enkor-cta" target="_blank">Pre‑Order Now</a>
+
+        <div class="enkor-footer">NEW ARRIVAL · 2026.6.18 · ENKOR</div>
+
+    </div>
+
+    <script src="js/whatsapp.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const targetDate = new Date('June 18, 2026 00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById('days').innerHTML = '00';
+                document.getElementById('hours').innerHTML = '00';
+                document.getElementById('minutes').innerHTML = '00';
+                document.getElementById('seconds').innerHTML = '00';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = String(days).padStart(2, '0');
+            document.getElementById('hours').innerHTML = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerHTML = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerHTML = String(seconds).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>

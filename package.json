@@ -1,0 +1,23 @@
+{
+  "name": "enkor-launch",
+  "version": "1.0.0",
+  "description": "ENKOR landing page for the 2026 new product launch",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 3000",
+    "build": "echo 'Static site - no build step required'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "enkor",
+    "soundbar",
+    "audio",
+    "landing-page",
+    "2026-launch"
+  ],
+  "author": "ENKOR Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
